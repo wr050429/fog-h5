@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>雾汀塔罗 · 抽牌</title>
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="backdrop" id="backdrop"></div>
+<div class="hero">
+  <div class="topbar">
+    <a href="../index.html" class="link-btn" style="text-decoration:none;">← 雾汀地图</a>
+    <span class="spacer"></span>
+    <span class="seed-tag" id="seed-tag">种子 #—</span>
+    <button class="link-btn" id="btn-new">换一局</button>
+    <button class="link-btn" id="btn-restart">重新开始</button>
+  </div>
+  <div class="hero-title">
+  <h1>雾汀塔罗 · 抽牌</h1>
+  <p class="sub">雾港印的《雾汀塔罗》。夜间收件处用它给投不出去的信“问路”——<br>
+  抽一张，看看今晚的信该往哪儿去。</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <p class="meta">怎么玩</p>
+    <p>今日一抽：每天抽一张，同一天、同一种子抽到同一张。雾 / 灯 / 信三张牌阵：雾是面对什么，灯是该怎么做，信是会收到什么。抽出的牌也可以作跑团开局的一张，定本场调查的基调。</p>
+    <button class="btn" id="btn-help">复制求援提示词<span class="hint">把你抽到的牌整理好，贴给你的 AI 一起读（只含已抽的牌，不含牌面之外的“真相”）</span></button>
+  </div>
+
+  <div class="card" id="daily-card">
+    <p class="meta">今日一抽 · <span id="daily-date"></span></p>
+    <div id="daily-slot"></div>
+    <button class="btn secondary" id="btn-daily">抽今日一牌</button>
+  </div>
+
+  <div class="card" id="spread-card">
+    <p class="meta">雾 / 灯 / 信 · 三张牌阵</p>
+    <div class="tarot-spread" id="spread-slots"></div>
+    <button class="btn secondary" id="btn-spread">抽雾 / 灯 / 信三张牌阵</button>
+  </div>
+
+  <p class="small">进度自动保存在本机浏览器里，刷新不丢。种子号在页面上方，分享同一局给别人时，把带 ?seed= 的链接发过去就行。</p>
+</div>
+<script src="../assets/backdrops.js"></script>
+<script src="../assets/common.js"></script>
+<script src="cards.js"></script>
+<script>window.FogBackdrop.mount("tarot", document.getElementById("backdrop"));</script>
+<script src="tarot.js"></script>
+</body>
+</html>
